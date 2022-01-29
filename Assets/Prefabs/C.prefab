@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4125471728267972529, guid: 41834df59254a4222a8344f25710392a, type: 3}
+  - {fileID: 2100000, guid: 274fe80308363974f87a9190f42238d8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionFx: {fileID: 3892925982420229426, guid: 8ac1c5f37a99b41cfb96ce6ee068f6d2, type: 3}
+  explosionAudio: {fileID: 568250877441115632, guid: b6762dce58b7549a2a0f9fd0d174a38f, type: 3}
 --- !u!65 &8081655394062186605
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -107,5 +108,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8.00961, y: 12.594519, z: 2.5}
+  m_Size: {x: 15, y: 18, z: 10}
   m_Center: {x: -4.7736163, y: 6.1434975, z: 1.25}

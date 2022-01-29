@@ -10,8 +10,13 @@ public class PlayerController : MonoBehaviour
     public float xMax = 13f;
     public float yMax = 7f;
     public GameObject explosionFx;
+    public ParticleSystem laserBeams;
+    public AudioClip laserBeamSoundClip;
+    public AudioSource laserBeamSound;
+    public float clipTime =0.1f;
 
     private bool isControllable = true;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -22,9 +27,24 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+ 
+
         if (isControllable)
         {
             Move();
+            if (Input.GetMouseButton(1))
+            {
+                if (!laserBeams.isPlaying) laserBeams.Play();
+                if (laserBeams.time <= clipTime) 
+                {
+                    laserBeamSound.PlayOneShot(laserBeamSoundClip);
+                }
+            }
+            else
+            {
+                if (laserBeams.isPlaying) laserBeams.Stop();
+                // if (laserBeamSounds.isPlaying) laserBeamSounds.Stop();
+            }
         }
     }
 
@@ -48,4 +68,6 @@ public class PlayerController : MonoBehaviour
         transform.localPosition = new Vector3(clampedXPos, clampedYPos, transform.localPosition.z);
         
     }
+
+    
 }

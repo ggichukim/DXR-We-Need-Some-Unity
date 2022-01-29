@@ -7,11 +7,18 @@ public class Projectile : MonoBehaviour
 
 {
     public GameObject explosionFx;
+    public AudioSource explosionAudio;
+    
+    void start()
+    {
+        
+    }
 
     void OnParticleCollision(GameObject other)
     {
-        FindObjectOfType<Score>().AddScore();
+        if (this.tag == "Correct") FindObjectOfType<Score>().AddScore();
         Instantiate(explosionFx, transform.position, Quaternion.identity);
+        Instantiate(explosionAudio, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }

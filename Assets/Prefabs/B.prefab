@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionFx: {fileID: 3892925982420229426, guid: 8ac1c5f37a99b41cfb96ce6ee068f6d2, type: 3}
+  explosionAudio: {fileID: 568250877441115632, guid: b6762dce58b7549a2a0f9fd0d174a38f, type: 3}
 --- !u!65 &1349360003152205438
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -107,5 +108,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7.7579994, y: 13.16232, z: 2.5}
+  m_Size: {x: 15, y: 18, z: 10}
   m_Center: {x: -58.152237, y: 6.3714843, z: 1.25}

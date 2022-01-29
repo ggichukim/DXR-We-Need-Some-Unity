@@ -7,7 +7,7 @@ using TMPro;
 
 public class Score : MonoBehaviour
 {
-    public int score;
+    public int score = 0;
     public TextMeshProUGUI scoreUI;
 
     private int HitScore = 50;
@@ -15,7 +15,7 @@ public class Score : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scoreUI.text = "Score: " + score.ToString();
+        scoreUI.text = "Score: 0";
     }
 
     public void AddScore()
